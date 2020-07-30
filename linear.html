@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Header -->
+	<title>Linear</title>
+	<script src="linear.js"></script>
+</head>
+
+<body onload="main();">
+	<canvas id="canvas" width=1300 height=250 style="border: 1px solid #000000"></canvas><br>
+	
+    Количество частиц: <input type="number" id = "Quantity" min=15 max=100 value=50 style="width: 50px">  
+	Начальная скорость: <input type="number" id = "v" min=-0.5 max=0.5 value=0.05 step = 0.05 style="width: 50px">	
+	Скорость моделирования: <input type="number" id = "Step" min=0 max=10 value=5.5 step = 0.5 style="width: 50px" disabled>
+	<input type="range" id="slider" min="0" max="10" value=5.5 step=0.5 style="width: 150px;"><br>
+	
+    Выбрать частицу:
+	<input type="radio" id="n1" name="Number"> С краю
+	<input type="radio" id="n2" name="Number" checked=true> В центре
+    
+    <input type="button" id = "New" value = "Начать"/><br>
+	
+	График скорости частиц<br>
+	Масштаб по OY: 
+	<input type="button" id = "Plus" value = "+"/> 
+	<input type="button" id = "Minus" value = "-"/>
+	<input type="number" id = "Zoom" min=1 max=100 disabled style="width: 50px" >
+	
+	Вид графика:
+	<input type="radio" id="r1" name="r" checked=true> Линии
+	<input type="radio" id="r2" name="r"> Шарики
+	
+	<br>
+	<canvas id="canvas_v" width=1300 height=300 style="border: 1px solid #000000"></canvas><br>
+    
+</body>
+</html>
